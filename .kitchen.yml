@@ -97,7 +97,7 @@ suites:
         version:
           major: 1
           minor: 5
-          incremental: 4
+          incremental: 0
     stanchion:
       package:
         version:
@@ -111,7 +111,7 @@ suites:
           minor: 0
           incremental: 2
     riak:
-      cs_version: "1.5.4"
+      cs_version: "1.5.0"
       package:
         version:
           major: 1
@@ -171,8 +171,8 @@ suites:
         enterprise_key: <%= (ENV["RIAK_CS_ENTERPRISE_KEY"].nil? ? "" : ENV["RIAK_CS_ENTERPRISE_KEY"]) %>
         version:
           major: 1
-          minor: 4
-          incremental: 5
+          minor: 5
+          incremental: 0
     stanchion:
       package:
         version:
@@ -186,7 +186,7 @@ suites:
           minor: 0
           incremental: 2
     riak:
-      cs_version: "1.5.4"
+      cs_version: "1.5.0"
       package:
         version:
           major: 1

@@ -78,14 +78,14 @@ file "#{node['stanchion']['package']['config_dir']}/app.config" do
   content Eth::Config.new(node['stanchion']['config'].to_hash).pp
   owner "root"
   mode 0644
-  notifies :restart, "service[stanchion]"
+  ############################################# notifies :restart, "service[stanchion]"
 end
 
 file "#{node['stanchion']['package']['config_dir']}/vm.args" do
   content Eth::Args.new(node['stanchion']['args'].to_hash).pp
   owner "root"
   mode 0644
-  notifies :restart, "service[stanchion]"
+  ############################################# notifies :restart, "service[stanchion]"
 end
 
 if node['platform_family'] == "debian"
@@ -94,7 +94,7 @@ if node['platform_family'] == "debian"
     owner "root"
     mode 0644
     action :create_if_missing
-    notifies :restart, "service[stanchion]"
+    ############################################# notifies :restart, "service[stanchion]"
   end
 else
   user_ulimit "stanchion" do

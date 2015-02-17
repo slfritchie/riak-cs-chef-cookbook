@@ -186,7 +186,7 @@ suites:
           minor: 0
           incremental: 2
     riak:
-      cs_version: "1.4.5"
+      cs_version: "1.5.4"
       package:
         version:
           major: 1

@@ -104,5 +104,11 @@ end
 
 service "stanchion" do
   supports :start => true, :stop => true, :restart => true
-  action [ :enable, :start ]
+  ## Do not start stanchion now: it's too racy.  Stanchion will refuse to start if
+  ## it cannot connect successfully to Riak, and it's difficult to predict how
+  ## long Riak will start, especially with a large ring-size/#-nodes ratio.
+  ## Furthermore, Chef seems unpredictable in managing its services queue, will
+  ## stanchion's init.d service be started before or after riak's?  Best simply
+  ## not to go there.
+  action [ :enable ]
 end
